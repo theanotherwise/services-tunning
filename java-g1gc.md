@@ -1,4 +1,5 @@
 # GC Type vs Spaces vs Threads
+
 | GC Type                       | Eden | Survivor | Old     | ParallelGCThreads | ConcGCThreads |
 |-------------------------------|------|----------|---------|-------------------|---------------|
 | **Young GC**                  |  +   |    +     |         |         +         |               |
@@ -6,7 +7,7 @@
 | **Full GC**                   |  +   |    +     |    +    |         +         |               |
 | **Concurrent Mark / Cleanup** |      |          |    +    |                   |        +      |
 
-# Parameterse
+# Key JVM Parameters
 
 | JVM Option                     | Meaning                          | Note                                     |
 |-------------------------------|----------------------------------|------------------------------------------|
@@ -14,3 +15,13 @@
 | G1MixedGCCountTarget           | higher → softer cleanup         | number of Mixed GCs after Concurrent Mark |
 | InitiatingHeapOccupancyPercent | lower → earlier CM trigger      | % of heap usage to start CM               |
 | G1ReservePercent               | higher → larger safety buffer   | % of heap reserved to avoid Full GC       |
+
+# Concepts
+
+| Concept         | Description                                                                 |
+|-----------------|-----------------------------------------------------------------------------|
+| Object lifecycle| `Eden → Survivor (age++) → Old (if age ≥ threshold)`                        |
+| Humongous       | objects ≥ 50% region size go directly to Old, span multiple regions         |
+| STW GCs         | Young, Mixed, Full                                                           |
+| Concurrent GCs  | Concurrent Mark, Cleanup (run with application)                             |
+| G1 goal         | short pause times via incremental cleanup and concurrent marking            |
