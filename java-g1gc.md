@@ -25,3 +25,19 @@
 | STW GCs         | Young, Mixed, Full                                                           |
 | Concurrent GCs  | Concurrent Mark, Cleanup (run with application)                             |
 | G1 goal         | short pause times via incremental cleanup and concurrent marking            |
+
+```bash
+-XX:+UseG1GC
+
+-XX:MaxGCPauseMillis=100
+-XX:+UseStringDeduplication
+
+-XX:InitiatingHeapOccupancyPercent=25
+-XX:G1ReservePercent=25
+
+-XX:MaxTenuringThreshold=8
+-XX:G1MixedGCCountTarget=16
+
+-XX:ConcGCThreads=48
+-XX:ParallelGCThreads=96
+```
