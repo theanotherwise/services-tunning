@@ -8,9 +8,9 @@
 
 # Parameterse
 
-| JVM Option                     | Opis                                                                 |
-|-------------------------------|----------------------------------------------------------------------|
-| MaxTenuringThreshold          | lower → fast to old (tenured) `E→S→S→...` age ≥ threshold            |
-| G1MixedGCCountTarget          | higher → soft cleanup — GCs to clean old after CM                   |
-| InitiatingHeapOccupancyPercent| lower → CM starts earlier                                           |
-| G1ReservePercent              | higher → more safety buffer — % of heap reserved to avoid Full GC   |
+| JVM Option                     | Opis                          |                                     |
+|--------------------------------|-------------------------------|-------------------------------------|
+| MaxTenuringThreshold           | lower → fast to old (tenured) | `E→S→S→...` age ≥ threshold         |
+| G1MixedGCCountTarget           | higher → soft cleanup         | GCs to clean old after CM           |
+| InitiatingHeapOccupancyPercent | lower → CM starts earlier     |                                     |
+| G1ReservePercent               | higher → more safety buffer   | % of heap reserved to avoid Full GC |
