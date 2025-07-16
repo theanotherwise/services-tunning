@@ -34,11 +34,17 @@
 -XX:+UseG1GC
 -XX:MaxGCPauseMillis=100
 -XX:+UseStringDeduplication
+# Default: 45
 -XX:InitiatingHeapOccupancyPercent=25
+# Default: 10
 -XX:G1ReservePercent=25
+# Default: 15 (adaptive)
 -XX:MaxTenuringThreshold=8
+# Default: 8
 -XX:G1MixedGCCountTarget=16
+# Default: CPU_COUNT / 4
 -XX:ConcGCThreads=48
+# Default: CPU_COUNT
 -XX:ParallelGCThreads=96
 ```
 
