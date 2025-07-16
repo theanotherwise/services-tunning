@@ -32,8 +32,8 @@
 
 ```bash
 -XX:+UseG1GC
+# Default: 200
 -XX:MaxGCPauseMillis=100
--XX:+UseStringDeduplication
 # Default: 45
 -XX:InitiatingHeapOccupancyPercent=25
 # Default: 10
