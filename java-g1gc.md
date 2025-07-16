@@ -11,6 +11,8 @@
 
 # G1GC
 
+## Understanding
+
 ### GC Type vs Spaces vs Threads
 
 | GC Type                       | Eden | Survivor | Old     | ParallelGCThreads | ConcGCThreads |
@@ -39,7 +41,7 @@
 | Concurrent GCs  | Concurrent Mark, Cleanup (run with application)                             |
 | G1 goal         | short pause times via incremental cleanup and concurrent marking            |
 
-### Snippet
+## Snippet
 
 ```yaml
 -XX:+UseG1GC
@@ -54,7 +56,7 @@
 
 # ZGC
 
-### Snippet
+## Snippet
 
 ```yaml
 -XX:+UseZGC
