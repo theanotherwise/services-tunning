@@ -41,7 +41,7 @@
 
 ### Snippet
 
-```bash
+```yaml
 -XX:+UseG1GC
 -XX:MaxGCPauseMillis=100               # Default: 200
 -XX:InitiatingHeapOccupancyPercent=25  # Default: 45
