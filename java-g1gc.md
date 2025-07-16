@@ -13,6 +13,13 @@
 
 ## Understanding
 
+## Base
+
+```yaml
+-XX:+UseStringDeduplication
+-XX:+AlwaysPreTouch
+```
+
 ### GC Type vs Spaces vs Threads
 
 | GC Type                       | Eden | Survivor | Old     | ParallelGCThreads | ConcGCThreads |
@@ -45,6 +52,7 @@
 
 ```yaml
 -XX:+UseG1GC
+
 -XX:MaxGCPauseMillis=100               # Default: 200
 -XX:InitiatingHeapOccupancyPercent=25  # Default: 45
 -XX:G1ReservePercent=25                # Default: 10
