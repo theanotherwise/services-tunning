@@ -1,6 +1,6 @@
 # G1GC
 
-## GC Type vs Spaces vs Threads
+### GC Type vs Spaces vs Threads
 
 | GC Type                       | Eden | Survivor | Old     | ParallelGCThreads | ConcGCThreads |
 |-------------------------------|------|----------|---------|-------------------|---------------|
@@ -9,7 +9,7 @@
 | **Full GC**                   |  +   |    +     |    +    |         +         |               |
 | **Concurrent Mark / Cleanup** |      |          |    +    |                   |        +      |
 
-## Key JVM Parameters
+### Key JVM Parameters
 
 | JVM Option                     | Meaning                          | Note                                     |
 |-------------------------------|----------------------------------|------------------------------------------|
@@ -18,7 +18,7 @@
 | InitiatingHeapOccupancyPercent | lower → earlier CM trigger      | % of heap usage to start CM               |
 | G1ReservePercent               | higher → larger safety buffer   | % of heap reserved to avoid Full GC       |
 
-# Concepts
+### Concepts
 
 | Concept         | Description                                                                 |
 |-----------------|-----------------------------------------------------------------------------|
@@ -28,18 +28,16 @@
 | Concurrent GCs  | Concurrent Mark, Cleanup (run with application)                             |
 | G1 goal         | short pause times via incremental cleanup and concurrent marking            |
 
+### Snippet
+
 ```bash
 -XX:+UseG1GC
-
 -XX:MaxGCPauseMillis=100
 -XX:+UseStringDeduplication
-
 -XX:InitiatingHeapOccupancyPercent=25
 -XX:G1ReservePercent=25
-
 -XX:MaxTenuringThreshold=8
 -XX:G1MixedGCCountTarget=16
-
 -XX:ConcGCThreads=48
 -XX:ParallelGCThreads=96
 ```
