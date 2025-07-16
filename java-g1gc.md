@@ -1,10 +1,10 @@
 # GC Type vs Spaces vs Threads
 | GC Type                  | Eden | Survivor | Old     | ParallelGCThreads | ConcGCThreads |
 |--------------------------|------|----------|---------|-------------------|----------------|
-| **Young GC**             |  +   |    +     |         |         +         |        -       |
+| **Young GC**             |  +   |    +     |         |         +         |               |
 | **Mixed GC**             |  +   |    +     | partial |         +         |        +       |
 | **Full GC**              |  +   |    +     |    +    |         +         |        -       |
-| **Concurrent Mark / Cleanup** |      |          |    +    |         -         |        +       |
+| **Concurrent Mark / Cleanup** |      |          |    +    |                  |        +       |
 
 # Parameterse
 
