@@ -1,3 +1,14 @@
+# Base
+
+### Heap Sizes
+
+| JVM Option          | Value       | Description    |
+|---------------------|-------------|----------------|
+| Max G1GC            | -Xms262144m |                |
+|                     | -Xmx262144m |                |
+| Enabled Compression | -Xms32736m  |                |
+|                     | -Xmx32736m  |                |
+
 # G1GC
 
 ### GC Type vs Spaces vs Threads
