@@ -1,4 +1,6 @@
-# GC Type vs Spaces vs Threads
+# G1GC
+
+## GC Type vs Spaces vs Threads
 
 | GC Type                       | Eden | Survivor | Old     | ParallelGCThreads | ConcGCThreads |
 |-------------------------------|------|----------|---------|-------------------|---------------|
@@ -7,7 +9,7 @@
 | **Full GC**                   |  +   |    +     |    +    |         +         |               |
 | **Concurrent Mark / Cleanup** |      |          |    +    |                   |        +      |
 
-# Key JVM Parameters
+## Key JVM Parameters
 
 | JVM Option                     | Meaning                          | Note                                     |
 |-------------------------------|----------------------------------|------------------------------------------|
@@ -41,3 +43,5 @@
 -XX:ConcGCThreads=48
 -XX:ParallelGCThreads=96
 ```
+
+# ZGC
