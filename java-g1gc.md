@@ -53,3 +53,9 @@
 ```
 
 # ZGC
+
+### Snippet
+
+```yaml
+-XX:+UseZGC
+```
