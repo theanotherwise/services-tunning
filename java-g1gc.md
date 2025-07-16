@@ -32,20 +32,13 @@
 
 ```bash
 -XX:+UseG1GC
-# Default: 200
--XX:MaxGCPauseMillis=100
-# Default: 45
--XX:InitiatingHeapOccupancyPercent=25
-# Default: 10
--XX:G1ReservePercent=25
-# Default: 15 (adaptive)
--XX:MaxTenuringThreshold=8
-# Default: 8
--XX:G1MixedGCCountTarget=16
-# Default: CPU_COUNT / 4
--XX:ConcGCThreads=48
-# Default: CPU_COUNT
--XX:ParallelGCThreads=96
+-XX:MaxGCPauseMillis=100               # Default: 200
+-XX:InitiatingHeapOccupancyPercent=25  # Default: 45
+-XX:G1ReservePercent=25                # Default: 10
+-XX:MaxTenuringThreshold=8             # Default: 15 (adaptive)
+-XX:G1MixedGCCountTarget=16            # Default: 8
+-XX:ConcGCThreads=48                   # Default: CPU_COUNT / 4
+-XX:ParallelGCThreads=96               # Default: CPU_COUNT
 ```
 
 # ZGC
