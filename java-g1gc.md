@@ -13,7 +13,7 @@
 
 ## Understanding
 
-## Base
+### Base Parameterse
 
 ```yaml
 -XX:+UseStringDeduplication
