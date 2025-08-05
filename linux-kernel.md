@@ -56,7 +56,7 @@ sysctl -w fs.aio-max-nr=65536
 sysctl -w vm.max_map_count=262144
 sysctl -w vm.overcommit_memory=1
 # Default 50, overcommit_memory=2 -> overcommit_ratio=80
-sysctl -w vm.overcommit_ratio=80
+# sysctl -w vm.overcommit_ratio=80
 sysctl -w vm.swappiness=0
 sysctl -w vm.dirty_background_ratio=5
 sysctl -w vm.dirty_ratio=40
